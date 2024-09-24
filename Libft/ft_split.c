@@ -6,7 +6,7 @@
 /*   By: fwu <fwu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 10:53:51 by fwu               #+#    #+#             */
-/*   Updated: 2024/02/19 14:58:38 by fwu              ###   ########.fr       */
+/*   Updated: 2024/03/24 17:40:00 by fwu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,10 @@ char	**ft_split(char const *str, char c)
 	char	**str2;
 	int		s_idx;
 
+	if (str == NULL)
+	{
+		return (0);
+	}
 	str2 = (char **) malloc(sizeof(char *) * (count_words(str, c) + 1));
 	if (!str2)
 	{
