@@ -6,7 +6,7 @@
 /*   By: fwu <fwu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:21:44 by fwu               #+#    #+#             */
-/*   Updated: 2024/02/22 19:37:04 by fwu              ###   ########.fr       */
+/*   Updated: 2024/09/24 21:47:01 by fwu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (lst && *lst && del)
 	{
 		tmp = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
+		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
 	lst = 0;

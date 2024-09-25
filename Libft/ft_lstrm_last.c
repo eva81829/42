@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstrm_last.C                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwu <fwu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 14:15:34 by fwu               #+#    #+#             */
-/*   Updated: 2024/09/25 14:31:26 by fwu              ###   ########.fr       */
+/*   Created: 2024/09/25 14:36:47 by fwu               #+#    #+#             */
+/*   Updated: 2024/09/25 14:38:33 by fwu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+// remove the last node of the list
+void	ft_lstrm_last(t_list **lst, void (*del)(void*))
 {
-	if (lst)
+	t_list	*last_node;
+	t_list	*sec_last_node;
+
+	last_node = *lst;
+	sec_last_node = NULL;
+	while (last_node != 0 && last_node->next != 0)
 	{
-		if (new)
-		{
-			new->next = *lst;
-			*lst = new;
-		}
-		else
-		{
-			*lst = new;
-		}
+		sec_last_node = last_node;
+		last_node = last_node->next;
 	}
+	if (last_node)
+		ft_lstdelone(last_node, del);
+	if (sec_last_node)
+		sec_last_node->next = NULL;
 }
