@@ -6,7 +6,7 @@
 /*   By: fwu <fwu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 14:15:34 by fwu               #+#    #+#             */
-/*   Updated: 2024/09/25 14:31:26 by fwu              ###   ########.fr       */
+/*   Updated: 2024/09/26 20:33:46 by fwu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,16 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 			new->next = *lst;
 			*lst = new;
 		}
-		else
+	}
+}
+
+void	ft_ilstadd_front(t_ilist **lst, t_ilist *new)
+{
+	if (lst)
+	{
+		if (new)
 		{
+			new->next = *lst;
 			*lst = new;
 		}
 	}
