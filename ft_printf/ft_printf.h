@@ -6,7 +6,7 @@
 /*   By: fwu <fwu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 13:52:15 by fwu               #+#    #+#             */
-/*   Updated: 2024/03/07 13:50:41 by fwu              ###   ########.fr       */
+/*   Updated: 2024/10/15 14:11:27 by fwu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdarg.h>
-# include "libft/libft.h"
+# include "Libft/libft.h"
 
 # define UPPER_CASE 1
 # define LOWER_CASE 0
