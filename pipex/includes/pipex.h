@@ -6,7 +6,7 @@
 /*   By: fwu <fwu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 16:17:19 by fwu               #+#    #+#             */
-/*   Updated: 2024/05/05 17:25:25 by fwu              ###   ########.fr       */
+/*   Updated: 2024/10/15 14:06:07 by fwu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include <errno.h>
 # include <fcntl.h>
-# include "../libft/libft.h"
+# include "../Libft/libft.h"
 # include "../get_next_line/get_next_line.h"
 
 # define SUCCESS	0

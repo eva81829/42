@@ -19,7 +19,7 @@ GET_OBJ = $(addprefix $(GET_DIR), $(GET:.c=.o))
 INC_DIR = includes/
 INCLUDES = -I $(INC_DIR)
 
-LIBFT_DIR = libft/
+LIBFT_DIR = Libft/
 LIBFT = $(addprefix $(LIBFT_DIR), libft.a)
 
 # Pipex targets
