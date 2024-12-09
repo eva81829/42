@@ -6,7 +6,7 @@
 /*   By: fwu <fwu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 15:46:34 by fwu               #+#    #+#             */
-/*   Updated: 2024/10/28 13:20:27 by fwu              ###   ########.fr       */
+/*   Updated: 2024/12/09 18:14:45 by fwu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ bool	map_create(t_map *map, char *map_name)
 	int		fd;
 
 	map_initialize(map);
+	if (ft_strncmp(ft_strchr(map_name, '.'), ".ber", 4) != 0)
+		return (false);
 	fd = open(map_name, O_RDONLY);
 	if (fd == -1)
 	{
